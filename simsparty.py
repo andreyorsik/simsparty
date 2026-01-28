@@ -101,6 +101,30 @@ class Computer(Robot):
 
     def use(self):
         self.battery -= 20
+        print('\n Что хотите  сделать?')
+        print('Скачать новую игру(1)')
+        print('Удалить игру(2)')
+        print('Поиграть в игру(3)')
+        print('Посмотреть сериал(4)')
+        print('Заняться программированием(5)')
+        print('Встать из-за компьютера(0)')
+
+        choice1 = input('Твой выбор:')
+    if choice1 == '1':
+        energy -= 10
+        print(f'{self.name} скачал новую игру')
+    elif choice1 == '2':
+        energy -= 5
+        print(f'{self.name} удалил игру')
+    elif choice1 == '3':
+        energy -= 10
+        print(f'{self.name} начал играть в игру')
+    elif choice1 == '4':
+        energy -= 10
+        print(f'{self.name} начал смотреть сериал')
+    elif choice1 == '5':
+        energy -= 10
+        print(f'{self.name} пишет код')
 
 
 # 3. Игровой мир(сценарий)
@@ -164,7 +188,7 @@ while True:
         player.repair_robot(robot)
     elif choice == '7':
 
-        def use(self):
+
             print('\n Что хотите  сделать?')
             print('Скачать новую игру(1)')
             print('Удалить игру(2)')
